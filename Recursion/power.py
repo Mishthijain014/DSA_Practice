@@ -20,7 +20,7 @@ def power(x,n):
     if(n<0):
         n = -n
         x = 1/x
-        half = power(n//2)
+        half = power(x,n//2)
     
     if n%2==2:
         return half * half
