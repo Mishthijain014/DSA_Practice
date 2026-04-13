@@ -1,4 +1,4 @@
-nums = [1, 2, 2]   # ✅ define input
+nums = [1, 2, 2]   
 result = []
 
 nums.sort()
