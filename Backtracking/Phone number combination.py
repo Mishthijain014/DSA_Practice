@@ -13,7 +13,7 @@ def backtracking(index,path):
         return []
     
     if(index==len(digits)):
-        result.append(path[:])
+        result.append(path)
         return
 
     for ch in phone[digits[index]]:
