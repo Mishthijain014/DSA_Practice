@@ -1,4 +1,4 @@
-nums = [1,2,3]
+nums = [1,1,3]
 result = []
 path = []
 visited = [False]*len(nums)

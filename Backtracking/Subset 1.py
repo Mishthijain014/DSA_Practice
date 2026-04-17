@@ -16,3 +16,4 @@ def backtrack(index,subset):
 backtrack(0,[])
 print(result)
 
+
