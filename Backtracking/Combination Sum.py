@@ -1,17 +1,21 @@
-n = 4
-k = 2
-
+candidates = [2,3,6,7]
+target = 7
 result = []
 
-def backtracking(index,path):
-    if(k==len(path)):
+def baktracking(index,target,path):
+    if target == 0:
         result.append(path[:])
         return
+    
+    if target<0:
+        return
+    
+    for i in range(index,len(candidates)):
+        path.append(candidates[i])
 
-    for i in range(index,n-(k-len(path))+2):
-        path.append(i)
-        backtracking(i+1,path)
+        baktracking(i,target-candidates[i],path)
+
         path.pop()
-        
-backtracking(1,[])
+
+baktracking(0,target,[])
 print(result)
