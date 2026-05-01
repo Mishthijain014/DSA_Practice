@@ -13,13 +13,13 @@ def restoreIpAddress(s):
             
             part = s[index:index+length]
 
-            if len(part) > 1 and parts[0] == 0:
+            if len(part) > 1 and part[0] == 0:
                 continue
 
             if int(part) <= 255:
                 path.append(part)
 
-                backtracking(index + length, parts,path)
+                backtracking(index + length, parts+1,path)
 
                 path.pop()
 
