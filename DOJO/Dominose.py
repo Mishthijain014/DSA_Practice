@@ -20,7 +20,7 @@ def pushdominos(dominos):
             force = 0
         else:
             force = max(force-1,0)
-        forces[i] += force   
+        forces[i] -= force   
 
     res = []
     for f in forces:

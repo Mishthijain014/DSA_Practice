@@ -16,5 +16,4 @@ while left < right:
 
 print(max_water)
         
-        
-        
+               

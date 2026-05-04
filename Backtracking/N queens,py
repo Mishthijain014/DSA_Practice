@@ -1,0 +1,6 @@
+def n_queens(n):
+    result = []
+    board = [["."]*n for a in range]
+
+    def is_safe(row,col):
+        for i in range()
