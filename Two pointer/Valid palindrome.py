@@ -9,7 +9,7 @@ while left < right:
         right -= 1
 
     if s[left].lower() != s[right].lower():
-        print("fasle") 
+        print("false") 
                 
     left += 1
     right -= 1
