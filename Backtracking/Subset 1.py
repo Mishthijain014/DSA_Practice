@@ -1,19 +1,18 @@
 result =[]
 nums = [1,2,3]
 
-def backtrack(index,subset):
-            
+def backtracking(index,subset):
     if(index==len(nums)):
         result.append(subset[:])
-        return
-
+        return 
+    
     subset.append(nums[index])
-    backtrack(index+1,subset)
+    backtracking(index+1,subset)
 
     subset.pop()
-    backtrack(index+1,subset)
+    backtracking(index+1,subset)
 
-backtrack(0,[])
+
+backtracking(0,[])
 print(result)
-
 
