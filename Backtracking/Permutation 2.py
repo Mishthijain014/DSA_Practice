@@ -5,26 +5,21 @@ visited = [False]*len(nums)
 nums.sort()
 
 
-def backtrack():
+def backtracking():
     if(len(path)==len(nums)):
         result.append(path[:])
         return
-
+    
     for i in range(len(nums)):
         if visited[i]:
             continue
 
-        if i>0 and nums[i]==nums[i-1] and not visited[i-1]:
+        if i >0 and nums[i] == nums[i-1] and not visited:
             continue
 
         path.append(nums[i])
-        visited[i] = True
+        visited[i]  = True
 
-        backtrack()
-
-        path.pop()
-        visited[i] = False
+        backtracking()
 
         
-backtrack()
-print(result)
