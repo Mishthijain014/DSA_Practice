@@ -3,22 +3,25 @@ result = []
 path = []
 visited = [False]*len(nums)
 
-def backtrack():
+def backtracking():
     if(len(path)==len(nums)):
         result.append(path[:])
         return
-            
+    
     for i in range(len(nums)):
-        if visited[i]:
+        if visited[i] == True:
             continue
 
         path.append(nums[i])
         visited[i] = True
 
-        backtrack()
+        backtracking()
 
         path.pop()
         visited[i] = False
 
-backtrack()
+backtracking()
 print(result)
+
+
+
