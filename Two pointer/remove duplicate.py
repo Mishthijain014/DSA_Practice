@@ -7,4 +7,4 @@ for fast in range(1,len(nums)):
         slow += 1
         nums[slow] = nums[fast]
 
-print(nums)
+print(nums[:slow + 1])
